@@ -1,5 +1,5 @@
 # Elasticity-Labs-1
-Labs on Elastic Load Balancers
+## Labs on Elastic Load Balancers
 
 ## Description
 <P> Elastic Load Balancing allows the distribution of incoming traffic to your Amazon AWS infrastructure across multiple instances. This represents a great tool in avoiding failures in your applications and web traffic. ELB automatically detects fails in your EC2 instances and redirects traffic to other available instances. During this Lab, you will learn to create and use your first ELB instance to balance the HTTP traffic between two EC2 instances. You will also gain a valuable understanding of the Classic Load Balancer behavior during an instance outage.

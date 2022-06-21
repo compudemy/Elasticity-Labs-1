@@ -81,11 +81,31 @@ A listener is a process that checks for connection requests. It is configured wi
 
 4. Choose Next: Add EC2 Instances.
 
+### Step 5: Register EC2 instances with your load balancer
+
+  Your load balancer distributes traffic between the instances that are registered to it. 
+ 
+1. On the Add EC2 Instances page, select the instances to register with your load balancer.
+
+2. Leave cross-zone load balancing and connection draining enabled. 
   
-  
+  Alternatively, you can register instances with your load balancer later on using the following options:
+ . Select running instances after you create the load balancer. For more information, see Register Instances with Your Load Balancer.
+
+ . Set up Auto Scaling to register the instances automatically when it launches them. For more information, see Set up a scaled and load-balanced application in the Amazon EC2 Auto Scaling Us 
  
- 
- 
- 
- 
- 
+### Step 6: Create and verify your load balancer
+
+<P> Before you create the load balancer, review the settings that you selected. After creating the load balancer, you can verify that it's sending traffic to your EC2 instances.
+
+    To create and test your load balancer
+
+1. On the Review page, choose Create.
+
+2. After you are notified that your load balancer was created, choose Close.
+
+3. Select your new load balancer.
+
+4. On the Description tab, check the Status row. If it indicates that some of your instances are not in service, its probably because they are still in the registration process. For more information, see Troubleshoot a Classic Load Balancer: Instance registration.
+
+5. After at least one of your EC2 instances is in service, you can test your load balancer. Copy the string from DNS name (for example, my-load-balancer-1234567890.us-west-2.elb.amazonaws.com) and paste it into the address field of an internet-connected web browser. If your load balancer is working, you see the default page of your server.

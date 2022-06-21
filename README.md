@@ -39,3 +39,11 @@ A listener is a process that checks for connection requests. It is configured wi
   
   ![ELB 1](https://user-images.githubusercontent.com/103466963/174758810-b1308400-ee9e-416c-8d62-b0c6b4060176.png)
   
+5. [EC2-VPC] For Available subnets, select at least one available public subnet using its add icon. The subnet is moved under Selected subnets. To improve the availability of your load balancer, select more than one public subnet.
+ 
+ You can add at most one subnet per Availability Zone. If you select a subnet from an Availability Zone where there is already an selected subnet, this subnet replaces the currently selected subnet for the Availability Zone.
+ 
+ ![ELB 2](https://user-images.githubusercontent.com/103466963/174759530-988a924d-e874-4fc3-846b-369b0b14e538.png)
+ 
+ 
+ 

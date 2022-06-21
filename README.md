@@ -53,14 +53,36 @@ A listener is a process that checks for connection requests. It is configured wi
  
  To assign security group to your load balancer
 
-1. On the Assign Security Groups page, select Create a new security group.
+1. On the Assign Security Groups page, 
+ 
+ select Create a new security group.
 
 2. Type a name and description for your security group, or leave the default name and description. This new security group contains a rule that allows traffic to the port that you configured your load balancer to use. 
  
  ![ELB 3](https://user-images.githubusercontent.com/103466963/174760431-a4697bdf-8d66-4610-9de5-ec10a8bae1f9.png)
  
+3. Choose Next: Configure Security Settings.
+
+4. For this tutorial, you are not using a secure listener. Choose Next: Configure Health Check to continue to the next step. 
  
- 
+### Step 4: Configure health checks for your EC2 instances
+
+ <P> Elastic Load Balancing automatically checks the health of the EC2 instances for your load balancer. If Elastic Load Balancing finds an unhealthy instance, it stops sending traffic to the instance and reroutes traffic to healthy instances. In this step, you customize the health checks for your load balancer.
+
+    To configure health checks for your instances
+
+1. On the Configure Health Check page, leave Ping Protocol set to HTTP and Ping Port set to 80.
+
+2. For Ping Path, replace the default value with a single forward slash ("/"). This tells Elastic Load Balancing to send health check queries to the default home page for your web server, such as index.html. 
+  
+  ![ELB 4](https://user-images.githubusercontent.com/103466963/174761310-8d817ad9-0ff0-467e-916f-f00f25026fb5.png)
+
+3. For Advanced Details, leave the default values.
+
+4. Choose Next: Add EC2 Instances.
+
+  
+  
  
  
  

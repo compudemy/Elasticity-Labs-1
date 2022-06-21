@@ -109,3 +109,26 @@ A listener is a process that checks for connection requests. It is configured wi
 4. On the Description tab, check the Status row. If it indicates that some of your instances are not in service, its probably because they are still in the registration process. For more information, see Troubleshoot a Classic Load Balancer: Instance registration.
 
 5. After at least one of your EC2 instances is in service, you can test your load balancer. Copy the string from DNS name (for example, my-load-balancer-1234567890.us-west-2.elb.amazonaws.com) and paste it into the address field of an internet-connected web browser. If your load balancer is working, you see the default page of your server.
+
+ Step 7: Delete your load balancer (optional)
+
+ <p> As soon as your load balancer becomes available, you are billed for each hour or partial hour that you keep it running. When you no longer need a load balancer, you can delete it. As soon as the load balancer is deleted, you stop incurring charges for it. Note that deleting a load balancer does not affect the instances registered with the load balancer.
+
+     To delete your load balancer
+
+1. If you have a CNAME record for your domain that points to your load balancer, point it to a new location and wait for the DNS change to take effect before deleting your load balancer.
+
+2. Open the Amazon EC2 console at https://console.aws.amazon.com/ec2/.
+
+3. On the navigation pane, under LOAD BALANCING, choose Load Balancers.
+
+4. Select the load balancer.
+
+5. Choose Actions, Delete.
+
+6. When prompted for confirmation, choose Yes, Delete.
+
+7. (Optional) After you delete a load balancer, the EC2 instances associated with the load balancer continue to run, and you are billed for each hour or partial hour that you keep them running.  
+ 
+ 
+ 

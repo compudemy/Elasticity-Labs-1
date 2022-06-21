@@ -45,5 +45,25 @@ A listener is a process that checks for connection requests. It is configured wi
  
  ![ELB 2](https://user-images.githubusercontent.com/103466963/174759530-988a924d-e874-4fc3-846b-369b0b14e538.png)
  
+6. Choose Next: Assign Security Groups.
+ 
+### Step 3: Assign security groups to your load balancer in a VPC
+
+<P> If you selected a VPC as your network, you must assign your load balancer a security group that allows inbound traffic to the ports that you specified for your load balancer and the health checks for your load balancer.
+ 
+ To assign security group to your load balancer
+
+1. On the Assign Security Groups page, select Create a new security group.
+
+2. Type a name and description for your security group, or leave the default name and description. This new security group contains a rule that allows traffic to the port that you configured your load balancer to use. 
+ 
+ ![ELB 3](https://user-images.githubusercontent.com/103466963/174760431-a4697bdf-8d66-4610-9de5-ec10a8bae1f9.png)
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  
  
